@@ -6,8 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Indrajit's Portfolio</title>
-  <meta name="description" content="Indrajit's portfolio website showcasing coding projects and skills. A Computer Science engineering student set to graduate in 2024." />
-  <meta name="keywords" content="Indrajit, Portfolio, Coding, Computer Science, Engineering, 2024 Graduate, CodeEnthusiast, TechExplorer" />
+  <meta name="description"
+    content="Indrajit's portfolio website showcasing coding projects and skills. A Computer Science engineering student set to graduate in 2024." />
+  <meta name="keywords"
+    content="Indrajit, Portfolio, Coding, Computer Science, Engineering, 2024 Graduate, CodeEnthusiast, TechExplorer" />
   <meta name="author" content="Indrajit" />
   <link rel="icon" href="/assets/profile-pic.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
@@ -16,56 +18,575 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
-<body>
-  <nav id="desktop-nav">
-    <div class="logo">Indrajit</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-  <nav id="hamburger-nav">
-    <div class="logo">Indrajit</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
-    </div>
-  </nav>
-  <section id="profile">
-    <div class="section__pic-container">
-      <img src="./assets/profile-pic.png" alt="Indrajit profile picture" />
-    </div>
+<body onload="myFunction()">
 
-    <div class="background">
-      <img src="assets/shape-wawes.svg" class="background1" alt="">
-      <img src="assets/shape-circle.svg" alt="" class="background2">
-    </div>
+  <!-- LOADER -->
+  <div id="loading">
+    <ul class="ull">
+      <li class='one lii'></li>
+      <li class='two lii'></li>
+      <li class='three lii'></li>
+      <li class='four lii'></li>
+      <li class='five lii'></li>
+    </ul>
+  </div>
+  <!-- LOADER END -->
+  <div id="mainContent" style="display: none;">
+    <nav id="desktop-nav">
+      <div class="logo">Indrajit</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Indrajit</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Indrajit profile picture" />
+      </div>
 
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">&lt;Indrajit/&gt;</h1>
-      <p class="section__text__p2"><span id="element"></span></p>
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/2024_Indrajit_Pal_MSIT.pdf')">
-          Download <i class="ri-download-line"></i>
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Contact Info
-        </button>
+      <div class="background">
+        <img src="assets/shape-wawes.svg" class="background1" alt="">
+        <img src="assets/shape-circle.svg" alt="" class="background2">
+      </div>
+
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">&lt;Indrajit/&gt;</h1>
+        <p class="section__text__p2"><span id="element"></span></p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/2024_Indrajit_Pal_MSIT.pdf')">
+            Download <i class="ri-download-line"></i>
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+            onclick="location.href='https://www.linkedin.com/in/indrajit02/'" />
+          <img src="./assets/facebook-circle-fill.svg" alt="My Facebook profile" class="icon"
+            onclick="location.href='https://www.facebook.com/profile.php?id=100033803686797'" />
+          <img src="./assets/instagram-fill.svg" alt="My Instagram profile" class="icon"
+            onclick="location.href='https://www.instagram.com/i_n_d_r_a_j_i_t_02'" />
+          <img src="./assets/twitter-icon.png" alt="My Twitter profile" class="icon"
+            onclick="location.href='https://twitter.com/Rockindra003'" />
+          <img src="./assets/github.png" alt="My Github profile" class="icon"
+            onclick="location.href='https://github.com/INDERJEET0202'" />
+        </div>
+      </div>
+    </section>
+    <section id="education">
+      <p class="section__text__p1">Go Through My</p>
+      <h1 class="title">Education</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/education_section.jpg" alt="Education picture" class="about-pic" />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/college.png" alt="College icon" class="icon" />
+              <h3>College</h3>
+              <p> <b> Meghnad Saha Institute of Technology</b> <br />Computer Science</p>
+              <p> <b> Grade:</b> 9.28 <br />2020 - 2024</p>
+            </div>
+            <div class="details-container">
+              <img src="./assets/school-fill.svg" alt="School" class="icon" />
+              <h3>School</h3>
+              <p><b>Bankura Zilla School</b> <br> Science<br /><b>Grade:</b> 86%</p>
+              <p>2018 - 2020</p>
+              <br>
+              <i class="ri-arrow-left-line"></i>
+            </div>
+            <div class="details-container">
+              <img src="./assets/school-fill.svg" alt="School" class="icon" />
+              <h3>School</h3>
+              <p><b>Vivekananda Siksha Niketan High School</b> <br /><b>Grade:</b> 93%</p>
+              <p>2016 - 2018</p>
+              <br>
+              <i class="ri-arrow-left-line"></i>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I'm Indrajit, a Computer Science engineering student set to graduate in 2024. Coding is my passion, and
+              I'm
+              an enthusiastic problem solver. Excited to explore the tech world and make a positive impact! 🚀💻
+              #CodeEnthusiast #FutureGraduate
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
+    </section>
+    <section id="skills">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title underline">Technologies / Frameworks</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/reactjs-line.svg" alt="React icon" class="icon" />
+                <div>
+                  <h3>React Js</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/npmjs-fill.svg" alt="Node icon" class="icon" />
+                <div>
+                  <h3>Node Js</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/express.svg" alt="Express icon" class="icon" />
+                <div>
+                  <h3>Express Js</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/Mongodb.png" alt="Mongo DB icon" class="icon" />
+                <div>
+                  <h3>Mongo DB</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/git-branch-fill.svg" alt="Git icon" class="icon" />
+                <div>
+                  <h3>Github</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/icons8-ar-100.png" alt="AR/VR icon" class="icon" />
+                <div>
+                  <h3>AR/VR</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+            <br>
+            <h2 class="experience-sub-title underline">Tools</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/icons8-vs-code.svg" alt="VS code icon" class="icon" />
+                <div>
+                  <h3>VS Code</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/icons8-unity.svg" alt="Unity icon" class="icon" />
+                <div>
+                  <h3>Unity GE</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/icons8-blender.svg" alt="Blender icon" class="icon" />
+                <div>
+                  <h3>Blender 3D</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/icons8-photoshop.svg" alt="Photoshop icon" class="icon" />
+                <div>
+                  <h3>Photoshop</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title underline">Languages</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/python.svg" alt="python icon" class="icon" />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/java.svg" alt="java icon" class="icon" />
+                <div>
+                  <h3>Java</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/javascript.svg" alt="javascript icon" class="icon" />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/mysql.svg" alt="mysql icon" class="icon" />
+                <div>
+                  <h3>My SQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/csharp.svg" alt="c# icon" class="icon" />
+                <div>
+                  <h3>C#</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/html5-fill.svg" alt="html icon" class="icon" />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/php.png" alt="PHP icon" class="icon" />
+                <div>
+                  <h3>PHP</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+            </div>
+            <br>
+            <h2 class="experience-sub-title underline">Subject Interests</h2>
+            <div class="article-container">
+              <article>
+                <img src="./assets/oops.png" alt="OOPS" class="icon" />
+                <div>
+                  <h3>OOPS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/DSA.png" alt="dsa icon" class="icon" />
+                <div>
+                  <h3>DSA</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/icons8-operating-system-64.png" alt="OS icon" class="icon" />
+                <div>
+                  <h3>Operating Systems</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/icons8-database-64.png" alt="DBMS" class="icon" />
+                <div>
+                  <h3>DBMS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+    </section>
+    <section id="projects" style="margin-top: 9rem;">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container swiper">
+        <div class="about-containers swiper-wrapper">
+          <div class="details-container color-container swiper-slide">
+            <div class="article-container">
+              <img src="./assets/project-1.png" alt="Doctor AI" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Doctor.AI / Group Project</h2>
+            <p class="technologies-used" style="padding-bottom: 10px;">Technologies: React, Node.js, Express, MongoDB
+            </p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/Anuragkumarsah/Hack4Bengal2.0'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://doctor--ai.vercel.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container swiper-slide">
+            <div class="article-container">
+              <img src="./assets/project-9.png" alt="Project 3" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Javascript Analog Clock</h2>
+            <p class="technologies-used" style="padding-bottom: 10px;">Technologies: Date Time, JavaScript, HTML, CSS
+            </p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/INDERJEET0202/Analog-Clock-Design'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://fancy-analog-clock.netlify.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container swiper-slide">
+            <div class="article-container">
+              <img src="./assets/project-3.png" alt="cyclone project" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Cyclone Prediction</h2>
+            <p class="technologies-used" style="padding-bottom: 10px;">Technologies: React, Node.js, Express, CNN,
+              DenseNet, XAI</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container swiper-slide">
+            <div class="article-container">
+              <img src="./assets/project-4.png" alt="Gold Price Notifier" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Gold Pice Drop Notifier</h2>
+            <p class="technologies-used" style="padding-bottom: 10px;">Technologies: Manifest.json V2, JavaScript,
+              MongoDb
+            </p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/INDERJEET0202/Gold-Price-Notifier-Chrome-Extension'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container swiper-slide">
+            <div class="article-container">
+              <img src="./assets/project-5.png" alt="Project 3" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Fullstack Netflix Clone</h2>
+            <p class="technologies-used" style="padding-bottom: 10px;">Technologies: Next.js, Node.js, Express.js,
+              Google
+              & Github Auth</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/INDERJEET0202/netflix_clone'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://netflix-clone-chi-lac-52.vercel.app/auth'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container swiper-slide">
+            <div class="article-container">
+              <img src="./assets/project-6.png" alt="Project 3" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Tic-Tac-Toe (MINIMAX)</h2>
+            <p class="technologies-used" style="padding-bottom: 10px;">Technologies: Javascript, MINIMAX Algorithm,
+              HTML,
+              CSS3</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/INDERJEET0202/TIC-TAC-TOE-using-MINIMAX'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://tic-tac-toe0123.netlify.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+
+          <div class="details-container color-container swiper-slide">
+            <div class="article-container">
+              <img src="./assets/project-7.png" alt="Project 3" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Text Utilities App</h2>
+            <p class="technologies-used" style="padding-bottom: 10px;">Technologies: HTML5, CSS3, Javascript,
+              LocalStorage
+            </p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/INDERJEET0202/textutils'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://easytextytext.netlify.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container swiper-slide">
+            <div class="article-container">
+              <img src="./assets/project-8.png" alt="Project 3" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Best Notes Taking App</h2>
+            <p class="technologies-used" style="padding-bottom: 10px;">Technologies: React.Js, Local Storage, JavaScript
+            </p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/INDERJEET0202/Notes-taking-app-using-ReactJS'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://magicnotess.netlify.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container swiper-slide">
+            <div class="article-container">
+              <img src="./assets/project-2.png" alt="chat app" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Realtime Chat App</h2>
+            <p class="technologies-used" style="padding-bottom: 10px;">Technologies: React.js, Node.js, Express.js,
+              Socket.IO</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/INDERJEET0202/Realtime-Chat-app-using-React'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://chat-and-react.vercel.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+          <div class="details-container color-container swiper-slide">
+            <div class="article-container">
+              <img src="./assets/project-10.png" alt="Project 3" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Weather App Demo</h2>
+            <p class="technologies-used" style="padding-bottom: 10px;">Technologies: Weather API, Node.js, Express.js,
+              Javascript</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/INDERJEET0202/Weather-app'">
+                Github
+              </button>
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://weather-app-purple.netlify.app/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="swiper-button swiper-button-prev"></div>
+        <div class="swiper-button swiper-button-next"></div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#coding-profiles'" />
+    </section>
+
+    <section id="coding-profiles">
+      <p class="section__text__p1">Go Through My</p>
+      <h1 class="title">Code Profiles</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img src="./assets/coding-profiles-section.jpg" alt="Coding Profiles picture" class="about-pic" />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img src="./assets/leetcode.png" alt="Leetcode icon" class="icon" />
+              <br>
+              <h3>LeetCode</h3>
+              <p> Solved <b> 600+</b> problems on <br />LeetCode Platform</p>
+              <br>
+              <br>
+              <br>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://leetcode.com/indrajit10/'">
+                Link <i class="ri-arrow-up-line"></i>
+              </button>
+            </div>
+            <div class="details-container">
+              <img src="./assets/codeingninjas.png" alt="School" class="icon" />
+              <br>
+              <h3>CodingNinjas</h3>
+              <p>Solving Problems on CodingNinjas very consistently. Ronin in Arrays.</p>
+              <br>
+              <br>
+              <br>
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.codingninjas.com/studio/profile/indrajit02'">
+                Link <i class="ri-arrow-up-line"></i>
+              </button>
+            </div>
+            <div class="details-container">
+              <img src="./assets/hackerrank.webp" alt="School" class="icon" />
+              <h3>HackerRank</h3>
+              <p>5☆ in Python, 3☆ in Problem Solving, 5☆ in C Language on HackerRank platform</p>
+              <br>
+              <button class="btn btn-color-2 project-btn"
+                onclick="location.href='https://www.hackerrank.com/Indrajit_Pal'">
+                Link <i class="ri-arrow-up-line"></i>
+              </button>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Welcome to my coding journey! I'm Indrajit, a Computer Science engineering student on track to graduate in
+              2024.
+              I'm truly passionate about coding and solving complex problems. Join me as I navigate the intricate world
+              of
+              technology, constantly improving my skills and striving to leave a positive mark! 🚀💻
+              #CodeEnthusiast #TechExplorer
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+    </section>
+
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+          <p><a href="mailto:palindrajit10@gmail.com">contact-me@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+          <p><a href="https://www.linkedin.com/in/indrajit02/">LinkedIn</a></p>
+        </div>
       </div>
       <div id="socials-container">
         <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
@@ -79,521 +600,26 @@
         <img src="./assets/github.png" alt="My Github profile" class="icon"
           onclick="location.href='https://github.com/INDERJEET0202'" />
       </div>
-    </div>
-  </section>
-  <section id="education">
-    <p class="section__text__p1">Go Through My</p>
-    <h1 class="title">Education</h1>
-    <div class="section-container">
-      <div class="section__pic-container">
-        <img src="./assets/education_section.jpg" alt="Education picture" class="about-pic" />
-      </div>
-      <div class="about-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <img src="./assets/college.png" alt="College icon" class="icon" />
-            <h3>College</h3>
-            <p> <b> Meghnad Saha Institute of Technology</b> <br />Computer Science</p>
-            <p> <b> Grade:</b> 9.28 <br />2020 - 2024</p>
-          </div>
-          <div class="details-container">
-            <img src="./assets/school-fill.svg" alt="School" class="icon" />
-            <h3>School</h3>
-            <p><b>Bankura Zilla School</b> <br> Science<br /><b>Grade:</b> 86%</p>
-            <p>2018 - 2020</p>
-            <br>
-            <i class="ri-arrow-left-line"></i>
-          </div>
-          <div class="details-container">
-            <img src="./assets/school-fill.svg" alt="School" class="icon" />
-            <h3>School</h3>
-            <p><b>Vivekananda Siksha Niketan High School</b> <br /><b>Grade:</b> 93%</p>
-            <p>2016 - 2018</p>
-            <br>
-            <i class="ri-arrow-left-line"></i>
-          </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-        <div class="text-container">
-          <p>
-            I'm Indrajit, a Computer Science engineering student set to graduate in 2024. Coding is my passion, and I'm
-            an enthusiastic problem solver. Excited to explore the tech world and make a positive impact! 🚀💻
-            #CodeEnthusiast #FutureGraduate
-          </p>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
-  </section>
-  <section id="skills">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Skills</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-sub-title underline">Technologies / Frameworks</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/reactjs-line.svg" alt="React icon" class="icon" />
-              <div>
-                <h3>React Js</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/npmjs-fill.svg" alt="Node icon" class="icon" />
-              <div>
-                <h3>Node Js</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/express.svg" alt="Express icon" class="icon" />
-              <div>
-                <h3>Express Js</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/Mongodb.png" alt="Mongo DB icon" class="icon" />
-              <div>
-                <h3>Mongo DB</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/git-branch-fill.svg" alt="Git icon" class="icon" />
-              <div>
-                <h3>Github</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/icons8-ar-100.png" alt="AR/VR icon" class="icon" />
-              <div>
-                <h3>AR/VR</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-          <br>
-          <h2 class="experience-sub-title underline">Tools</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/icons8-vs-code.svg" alt="VS code icon" class="icon" />
-              <div>
-                <h3>VS Code</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/icons8-unity.svg" alt="Unity icon" class="icon" />
-              <div>
-                <h3>Unity GE</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/icons8-blender.svg" alt="Blender icon" class="icon" />
-              <div>
-                <h3>Blender 3D</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/icons8-photoshop.svg" alt="Photoshop icon" class="icon" />
-              <div>
-                <h3>Photoshop</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title underline">Languages</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/python.svg" alt="python icon" class="icon" />
-              <div>
-                <h3>Python</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/java.svg" alt="java icon" class="icon" />
-              <div>
-                <h3>Java</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/javascript.svg" alt="javascript icon" class="icon" />
-              <div>
-                <h3>JavaScript</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/mysql.svg" alt="mysql icon" class="icon" />
-              <div>
-                <h3>My SQL</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/csharp.svg" alt="c# icon" class="icon" />
-              <div>
-                <h3>C#</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/html5-fill.svg" alt="html icon" class="icon" />
-              <div>
-                <h3>HTML</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/php.png" alt="PHP icon" class="icon" />
-              <div>
-                <h3>PHP</h3>
-                <p>Basic</p>
-              </div>
-            </article>
-          </div>
-          <br>
-          <h2 class="experience-sub-title underline">Subject Interests</h2>
-          <div class="article-container">
-            <article>
-              <img src="./assets/oops.png" alt="OOPS" class="icon" />
-              <div>
-                <h3>OOPS</h3>
-                <p>Experienced</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/DSA.png" alt="dsa icon" class="icon" />
-              <div>
-                <h3>DSA</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/icons8-operating-system-64.png" alt="OS icon" class="icon" />
-              <div>
-                <h3>Operating Systems</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-            <article>
-              <img src="./assets/icons8-database-64.png" alt="DBMS" class="icon" />
-              <div>
-                <h3>DBMS</h3>
-                <p>Intermediate</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-  </section>
-  <section id="projects" style="margin-top: 9rem;">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container swiper">
-      <div class="about-containers swiper-wrapper">
-        <div class="details-container color-container swiper-slide">
-          <div class="article-container">
-            <img src="./assets/project-1.png" alt="Doctor AI" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Doctor.AI / Group Project</h2>
-          <p class="technologies-used" style="padding-bottom: 10px;">Technologies: React, Node.js, Express, MongoDB</p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/Anuragkumarsah/Hack4Bengal2.0'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://doctor--ai.vercel.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="details-container color-container swiper-slide">
-          <div class="article-container">
-            <img src="./assets/project-9.png" alt="Project 3" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Javascript Analog Clock</h2>
-          <p class="technologies-used" style="padding-bottom: 10px;">Technologies: Date Time, JavaScript, HTML, CSS</p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/INDERJEET0202/Analog-Clock-Design'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://fancy-analog-clock.netlify.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="details-container color-container swiper-slide">
-          <div class="article-container">
-            <img src="./assets/project-3.png" alt="cyclone project" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Cyclone Prediction</h2>
-          <p class="technologies-used" style="padding-bottom: 10px;">Technologies: React, Node.js, Express, CNN,
-            DenseNet, XAI</p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="details-container color-container swiper-slide">
-          <div class="article-container">
-            <img src="./assets/project-4.png" alt="Gold Price Notifier" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Gold Pice Drop Notifier</h2>
-          <p class="technologies-used" style="padding-bottom: 10px;">Technologies: Manifest.json V2, JavaScript, MongoDb
-          </p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/INDERJEET0202/Gold-Price-Notifier-Chrome-Extension'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="details-container color-container swiper-slide">
-          <div class="article-container">
-            <img src="./assets/project-5.png" alt="Project 3" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Fullstack Netflix Clone</h2>
-          <p class="technologies-used" style="padding-bottom: 10px;">Technologies: Next.js, Node.js, Express.js, Google
-            & Github Auth</p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/INDERJEET0202/netflix_clone'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://netflix-clone-chi-lac-52.vercel.app/auth'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="details-container color-container swiper-slide">
-          <div class="article-container">
-            <img src="./assets/project-6.png" alt="Project 3" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Tic-Tac-Toe (MINIMAX)</h2>
-          <p class="technologies-used" style="padding-bottom: 10px;">Technologies: Javascript, MINIMAX Algorithm, HTML,
-            CSS3</p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/INDERJEET0202/TIC-TAC-TOE-using-MINIMAX'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://tic-tac-toe0123.netlify.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-
-        <div class="details-container color-container swiper-slide">
-          <div class="article-container">
-            <img src="./assets/project-7.png" alt="Project 3" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Text Utilities App</h2>
-          <p class="technologies-used" style="padding-bottom: 10px;">Technologies: HTML5, CSS3, Javascript, LocalStorage
-          </p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/INDERJEET0202/textutils'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://easytextytext.netlify.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="details-container color-container swiper-slide">
-          <div class="article-container">
-            <img src="./assets/project-8.png" alt="Project 3" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Best Notes Taking App</h2>
-          <p class="technologies-used" style="padding-bottom: 10px;">Technologies: React.Js, Local Storage, JavaScript
-          </p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/INDERJEET0202/Notes-taking-app-using-ReactJS'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://magicnotess.netlify.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="details-container color-container swiper-slide">
-          <div class="article-container">
-            <img src="./assets/project-2.png" alt="chat app" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Realtime Chat App</h2>
-          <p class="technologies-used" style="padding-bottom: 10px;">Technologies: React.js, Node.js, Express.js,
-            Socket.IO</p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/INDERJEET0202/Realtime-Chat-app-using-React'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="location.href='https://chat-and-react.vercel.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-        <div class="details-container color-container swiper-slide">
-          <div class="article-container">
-            <img src="./assets/project-10.png" alt="Project 3" class="project-img" />
-          </div>
-          <h2 class="experience-sub-title project-title">Weather App Demo</h2>
-          <p class="technologies-used" style="padding-bottom: 10px;">Technologies: Weather API, Node.js, Express.js,
-            Javascript</p>
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://github.com/INDERJEET0202/Weather-app'">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://weather-app-purple.netlify.app/'">
-              Live Demo
-            </button>
-          </div>
-        </div>
-
-
-      </div>
-      <div class="swiper-button swiper-button-prev"></div>
-      <div class="swiper-button swiper-button-next"></div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#coding-profiles'" />
-  </section>
-
-  <section id="coding-profiles">
-    <p class="section__text__p1">Go Through My</p>
-    <h1 class="title">Code Profiles</h1>
-    <div class="section-container">
-      <div class="section__pic-container">
-        <img src="./assets/coding-profiles-section.jpg" alt="Coding Profiles picture" class="about-pic" />
-      </div>
-      <div class="about-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <img src="./assets/leetcode.png" alt="Leetcode icon" class="icon" />
-            <br>
-            <h3>LeetCode</h3>
-            <p> Solved <b> 600+</b> problems on <br />LeetCode Platform</p>
-            <br>
-            <br>
-            <br>
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://leetcode.com/indrajit10/'">
-              Link <i class="ri-arrow-up-line"></i>
-            </button> 
-          </div>
-          <div class="details-container">
-            <img src="./assets/codeingninjas.png" alt="School" class="icon" />
-            <br>
-            <h3>CodingNinjas</h3>
-            <p>Solving Problems on CodingNinjas very consistently. Ronin in Arrays.</p>
-            <br>
-            <br>
-            <br>
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://www.codingninjas.com/studio/profile/indrajit02'">
-              Link <i class="ri-arrow-up-line"></i>
-            </button> 
-          </div>
-          <div class="details-container">
-            <img src="./assets/hackerrank.webp" alt="School" class="icon" />
-            <h3>HackerRank</h3>
-            <p>5☆ in Python, 3☆ in Problem Solving, 5☆ in C Language on HackerRank platform</p>
-            <br>
-            <button class="btn btn-color-2 project-btn"
-              onclick="location.href='https://www.hackerrank.com/Indrajit_Pal'">
-              Link <i class="ri-arrow-up-line"></i>
-            </button> 
-          </div>
-        </div>
-        <div class="text-container">
-          <p>
-            Welcome to my coding journey! I'm Indrajit, a Computer Science engineering student on track to graduate in 2024.
-            I'm truly passionate about coding and solving complex problems. Join me as I navigate the intricate world of
-            technology, constantly improving my skills and striving to leave a positive mark! 🚀💻
-            #CodeEnthusiast #TechExplorer
-          </p>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
-  </section>
-
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:palindrajit10@gmail.com">contact-me@gmail.com</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com/in/indrajit02/">LinkedIn</a></p>
-      </div>
-    </div>
-    <div id="socials-container">
-      <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-        onclick="location.href='https://www.linkedin.com/in/indrajit02/'" />
-      <img src="./assets/facebook-circle-fill.svg" alt="My Facebook profile" class="icon"
-        onclick="location.href='https://www.facebook.com/profile.php?id=100033803686797'" />
-      <img src="./assets/instagram-fill.svg" alt="My Instagram profile" class="icon"
-        onclick="location.href='https://www.instagram.com/i_n_d_r_a_j_i_t_02'" />
-      <img src="./assets/twitter-icon.png" alt="My Twitter profile" class="icon"
-        onclick="location.href='https://twitter.com/Rockindra003'" />
-      <img src="./assets/github.png" alt="My Github profile" class="icon"
-        onclick="location.href='https://github.com/INDERJEET0202'" />
-    </div>
-  </section>
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <p>Copyright &#169; 2023 Indrajit Pal. All Rights Reserved.</p>
-  </footer>
+      </nav>
+      <p>Copyright &#169; 2023 Indrajit Pal. All Rights Reserved.</p>
+    </footer>
+  </div>
   <script src="script.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="loader.js"></script>
   <script>
     var typed = new Typed('#element', {
       strings: ['Web Developer', 'Engineer', 'Coder', 'Eater'],
@@ -605,31 +631,47 @@
   <script>
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
-      loop: true,
-      slidesPerView: 4,
       spaceBetween: 24,
 
+      speed: 400,
+      loop: true,
       autoplay: {
-        delay: 3000,
-        disableOnInteraction: true,
+        delay: 2000,
+        disableOnInteraction: false
       },
+      slidesPerView: 'auto',
 
       centeredSlides: true,
 
       pagination: {
         el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
       },
 
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
     });
   </script>
+
+  <script>
+    var preloader = document.getElementById('loading');
+    var main = document.getElementById('mainContent');
+
+    // Function to hide the loader after 2 seconds
+    function hideLoader() {
+      setTimeout(function () {
+        preloader.style.display = 'none';
+        main.style.display = 'block';
+      }, 2000); // 2000 milliseconds (2 seconds)
+    }
+
+    // Call the hideLoader function when the page is loaded
+    window.onload = hideLoader;
+  </script>
+
 
 </body>
 
