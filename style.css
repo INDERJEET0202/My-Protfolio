@@ -15,6 +15,18 @@ body {
     rgba(243, 242, 255, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
+  transition: background 0.3s ease-in, color 0.3s ease-in;
+}
+
+body.dark-mode {
+  background: linear-gradient(
+    90deg,
+    rgb(29, 29, 29) 0%,
+    rgb(29, 29, 29) 100%
+  );
+  background-color: rgb(29, 29, 29);
+  color: #fff; 
+  transition: background 0.3s ease-in, color 0.3s ease-in;
 }
 
 html {
@@ -25,7 +37,13 @@ p {
   color: rgb(85, 85, 85);
 }
 
+p.dark-mode{
+  color: #c1c1c1;
+}
+
+
 /* TRANSITION */
+a{transition:.7s ease;} 
 
 a,
 .btn {
@@ -55,6 +73,10 @@ a {
   color: black;
   text-decoration: none;
   text-decoration-color: white;
+}
+
+a.dark-mode{
+  color: #fff;
 }
 
 a:hover {
@@ -219,6 +241,13 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  /* filter: invert(100%); */
+}
+
+.icon-dark{
+  cursor: pointer;
+  height: 2rem;
+  filter: invert(100%);
 }
 
 /* BUTTONS */
@@ -315,6 +344,11 @@ section {
   text-align: center;
 }
 
+.details-container-dark{
+  border-color:white ;
+background: #373737;
+}
+
 .section-container {
   gap: 4rem;
   height: 80%;
@@ -341,6 +375,11 @@ section {
 
 .underline {
   text-decoration: underline;
+}
+
+.underline-dark-mode{
+  text-decoration: underline;
+  color: #fff;
 }
 
 .experience-details-container {
@@ -486,6 +525,10 @@ footer p {
   animation: wave 10s ease-in-out infinite;
 }
 
+.dark-graphics-backgrounds{
+  filter: invert(100%);
+}
+
 .swiper-button::after {
   color: grey;
 }
@@ -569,4 +612,31 @@ footer p {
     -webkit-transform: translateY(12px);
     transform: translateY(12px);
   }
+}
+
+
+/* Apply circular border to clickable icons */
+.clickable-icon {
+  border: solid #000; /* Adjust the border width and color as needed */
+  border-radius: 50%; /* Makes the element circular */
+  width: 30px; /* Adjust the width and height as needed */
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Additional styling for light and dark mode icons if needed */
+#light-mode .clickable-icon {
+  background-color: #fff; /* Background color for the light mode icon */
+  color: #000; /* Icon color for the light mode */
+}
+
+#dark-mode .clickable-icon {
+  background-color: grey; /* Background color for the dark mode icon */
+  color: #fff; /* Icon color for the dark mode */
+}
+
+.download-dark{
+  color: white;
 }

@@ -42,9 +42,12 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li id="dark-mode"><i class="ri-sun-fill clickable-icon"></i></li>
+          <li id="light-mode"><i class="ri-moon-fill clickable-icon"></i></li>
         </ul>
       </div>
     </nav>
+
     <nav id="hamburger-nav">
       <div class="logo">Indrajit</div>
       <div class="hamburger-menu">
@@ -63,12 +66,12 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Indrajit profile picture" />
+        <img src="./assets/profile-pic.png"id="profile-pic" alt="Indrajit profile picture" />
       </div>
 
       <div class="background">
-        <img src="assets/shape-wawes.svg" class="background1" alt="">
-        <img src="assets/shape-circle.svg" alt="" class="background2">
+        <img src="assets/shape-wawes.svg" class="background1 graphics-backgrounds" alt="">
+        <img src="assets/shape-circle.svg" alt="" class="background2 graphics-backgrounds">
       </div>
 
       <div class="section__text">
@@ -76,7 +79,7 @@
         <h1 class="title">&lt;Indrajit/&gt;</h1>
         <p class="section__text__p2"><span id="element"></span></p>
         <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('./assets/2024_Indrajit_Pal_MSIT.pdf')">
+          <button class="btn btn-color-2 download" onclick="window.open('./assets/2024_Indrajit_Pal_MSIT.pdf')">
             Download <i class="ri-download-line"></i>
           </button>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
@@ -533,7 +536,7 @@
               <br>
               <br>
               <br>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://leetcode.com/indrajit10/'">
+              <button class="btn btn-color-2 project-btn download" onclick="location.href='https://leetcode.com/indrajit10/'">
                 Link <i class="ri-arrow-up-line"></i>
               </button>
             </div>
@@ -545,7 +548,7 @@
               <br>
               <br>
               <br>
-              <button class="btn btn-color-2 project-btn"
+              <button class="btn btn-color-2 project-btn download"
                 onclick="location.href='https://www.codingninjas.com/studio/profile/indrajit02'">
                 Link <i class="ri-arrow-up-line"></i>
               </button>
@@ -555,7 +558,7 @@
               <h3>HackerRank</h3>
               <p>5☆ in Python, 3☆ in Problem Solving, 5☆ in C Language on HackerRank platform</p>
               <br>
-              <button class="btn btn-color-2 project-btn"
+              <button class="btn btn-color-2 project-btn download"
                 onclick="location.href='https://www.hackerrank.com/Indrajit_Pal'">
                 Link <i class="ri-arrow-up-line"></i>
               </button>
@@ -618,6 +621,7 @@
     </footer>
   </div>
   <script src="script.js"></script>
+  <script src="lightDarkMode.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
