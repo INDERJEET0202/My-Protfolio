@@ -640,3 +640,7 @@ footer p {
 .download-dark{
   color: white;
 }
+
+.swiper-slide{
+  height: auto !important;
+}
