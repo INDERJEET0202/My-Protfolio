@@ -7,11 +7,11 @@ function toggleMenu() {
 
 function changeImageDark() {
   var img = document.getElementById("profile-pic");
-  img.src = "./assets/profile-pic-2.png";
+  img.src = "./assets/profile-pic.png";
 }
 
 function changeImageLight() {
   var img = document.getElementById("profile-pic");
-  img.src = "./assets/profile-pic.png";
+  img.src = "./assets/profile-pic-2.png";
 }
 
