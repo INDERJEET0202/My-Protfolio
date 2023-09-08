@@ -1,4 +1,3 @@
-
 // Get references to the light mode and dark mode icons
 const lightModeIcon = document.getElementById("light-mode");
 const darkModeIcon = document.getElementById("dark-mode");
@@ -66,7 +65,7 @@ function enableLightMode() {
 
     // remove icon-dark class to icons
     for (let i = 0; i < icons.length; i++) {
-        icons[i].classList.toggle("icon-dark");
+        icons[i].classList.remove("icon-dark");
     }
 
     body.classList.remove('dark-mode');

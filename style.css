@@ -21,7 +21,7 @@ body {
 body.dark-mode {
   background: linear-gradient(
     90deg,
-    rgb(29, 29, 29) 0%,
+    rgb(36, 36, 36) 0%,
     rgb(29, 29, 29) 100%
   );
   background-color: rgb(29, 29, 29);

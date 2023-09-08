@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="mediaqueries.css" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://www.unpkg.com/shery-js@1.0.0-alpha.0.5/dist/Shery.css">
 </head>
 
 <body onload="myFunction()">
@@ -42,8 +43,8 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li id="dark-mode"><i class="ri-sun-fill clickable-icon"></i></li>
-          <li id="light-mode"><i class="ri-moon-fill clickable-icon"></i></li>
+          <li id="dark-mode" onclick="changeImageLight()"><i class="ri-sun-fill clickable-icon"></i></li>
+          <li id="light-mode" onclick="changeImageDark()"><i class="ri-moon-fill clickable-icon"></i></li>
         </ul>
       </div>
     </nav>
@@ -66,7 +67,7 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png"id="profile-pic" alt="Indrajit profile picture" />
+        <img src="./assets/profile-pic.png" id="profile-pic" alt="Indrajit profile picture" />
       </div>
 
       <div class="background">
@@ -536,7 +537,8 @@
               <br>
               <br>
               <br>
-              <button class="btn btn-color-2 project-btn download" onclick="location.href='https://leetcode.com/indrajit10/'">
+              <button class="btn btn-color-2 project-btn download"
+                onclick="location.href='https://leetcode.com/indrajit10/'">
                 Link <i class="ri-arrow-up-line"></i>
               </button>
             </div>
@@ -680,6 +682,16 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"
+      integrity="sha512-auFmPm+de880vk/c+bgBmuOnQ7BM28z7zPWmepVgX8737t75OHZjElOnQqERwP8cE4DIyCJ+gb1kE0b/eLWcnA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+  <script src="https://www.unpkg.com/shery-js@1.0.0-alpha.0.5/dist/Shery.js"></script>
+  <script>
+    Shery.mouseFollower();
+  </script>
 
 </body>
 
