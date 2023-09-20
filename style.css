@@ -642,5 +642,6 @@ footer p {
 }
 
 .swiper-slide{
-  height: auto !important;
+  height: auto !important
+  ;
 }
