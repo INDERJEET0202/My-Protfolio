@@ -22,7 +22,7 @@
 <body onload="myFunction()">
 
   <!-- LOADER -->
-  <div id="loading">
+  <div id="loading" class="loader_bg">
     <ul class="ull">
       <li class='one lii'></li>
       <li class='two lii'></li>
@@ -700,6 +700,7 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"
@@ -710,6 +711,11 @@
   <script>
     Shery.mouseFollower();
   </script>
+    <script>
+      setTimeout(function () {
+        $('.loader_bg').fadeToggle();
+      }, 1500);
+    </script>
 
 </body>
 

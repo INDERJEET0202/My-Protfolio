@@ -617,7 +617,7 @@ footer p {
 
 /* Apply circular border to clickable icons */
 .clickable-icon {
-  border: solid #000; /* Adjust the border width and color as needed */
+  border: solid 1px #000; 
   border-radius: 50%; /* Makes the element circular */
   width: 30px; /* Adjust the width and height as needed */
   height: 30px;
