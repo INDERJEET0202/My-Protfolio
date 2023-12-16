@@ -15,3 +15,20 @@ function changeImageLight() {
   img.src = "./assets/profile-pic-2.png";
 }
 
+function changeImage() {
+  var img = document.getElementById("profile-pic");
+  
+  // Retrieve mode from localStorage
+  var mode = localStorage.getItem("mode");
+
+  // Default to "light" if mode is not set or invalid
+  if (!mode || (mode !== "dark" && mode !== "light")) {
+      mode = "light";
+  }
+
+  if (mode === "dark") {
+      img.src = "./assets/profile-pic.png";
+  } else if (mode === "light") {
+      img.src = "./assets/profile-pic-2.png";
+  }
+}

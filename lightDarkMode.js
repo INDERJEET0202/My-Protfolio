@@ -10,6 +10,9 @@ const details_container = document.getElementsByClassName("details-container");
 const h2_underline = document.getElementsByClassName("underline");
 const download_icon = document.getElementsByClassName("download")
 const profilePic = document.getElementById("profile-pic");
+const toggleSvg = document.getElementById("toggle");
+
+
 
 const localMode = localStorage.getItem("mode");
 if (localMode === "dark") {
@@ -115,3 +118,5 @@ function toggleMode() {
 // Toggle mode when clicking the icons
 lightModeIcon.addEventListener("click", toggleMode);
 darkModeIcon.addEventListener("click", toggleMode);
+
+toggleSvg.addEventListener("click", toggleMode);
