@@ -17,6 +17,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://www.unpkg.com/shery-js@1.0.0-alpha.0.5/dist/Shery.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
   <link href="dist/hamburgers.css" rel="stylesheet">
 </head>
 
@@ -59,7 +60,7 @@
 
                 <g transform="translate(2.333 2.333)" id="button">
 
-                  <g data-name="sun" id="sun dark-mode">
+                  <g data-name="sun" id="sun light-mode">
                     <g filter="url(#sun-outer)" transform="matrix(1, 0, 0, 1, -5.83, -5.83)">
                       <circle fill="#f8e664" transform="translate(5.83 5.83)" r="15.167" cy="15.167" cx="15.167"
                         data-name="sun-outer" id="sun-outer-2"></circle>
@@ -74,7 +75,7 @@
                   </g>
 
 
-                  <g data-name="moon" id="moon light-mode">
+                  <g data-name="moon" id="moon dark-mode">
                     <g filter="url(#moon)" transform="matrix(1, 0, 0, 1, -31.5, -5.83)">
                       <circle fill="#cce6ee" transform="translate(31.5 5.83)" r="15.167" cy="15.167" cx="15.167"
                         data-name="moon" id="moon-3"></circle>
@@ -127,8 +128,8 @@
             </svg>
           </label>
 
-          <li id="dark-mode" onclick="changeImageLight()"></li>
           <li id="light-mode" onclick="changeImageDark()"></li>
+          <li id="dark-mode" onclick="changeImageLight()"></li>
         </ul>
       </div>
     </nav>
@@ -731,6 +732,7 @@
   <script src="lightDarkMode.js"></script>
   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
   <script>
     var typed = new Typed('#element', {
       strings: ['Web Developer', 'Engineer', 'Coder'],

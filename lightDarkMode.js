@@ -15,10 +15,10 @@ const toggleSvg = document.getElementById("toggle");
 
 
 const localMode = localStorage.getItem("mode");
-if (localMode === "dark") {
+if (localMode === "light") {
     enableDarkMode();
 }
-else if (localMode === "light") {
+else if (localMode === "dark") {
     enableLightMode();
 }
 
